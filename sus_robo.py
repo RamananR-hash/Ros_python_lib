@@ -58,7 +58,7 @@ def Serial_sender(data):
     serial_port.write(msg.encode("utf-8"))    	
 def Start_up():
     rospy.init_node('listener', anonymous=True)
-    rospy.Subscriber("chatter", String, Serial_sender)
+    rospy.Subscriber("ARControl", String, Serial_sender)
     rospy.spin()
 
 if __name__ == '__main__':
